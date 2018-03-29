@@ -4,47 +4,74 @@
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
 - [Introduction](#introduction)
-- [Functionalities realized](#One)
-  - [Mapping the environment](#)
-  - [Displaying an asset in Unity Store](#)
-  - [Unity Store](#)
-  - [Independent movement of objects](#)
-  - [Object scaling](#)
-  - [Creating an object from a menu](#)
-- [Encountered difficulties](#)
-  - [Room complexity](#)
-  - [New technology](#)
-- [Limitations of the headset](#)
-  - [Assets limits](#)
-  - [Difficulties to display complex assets](#)
-  - [Field of view](#)
-- [Possible improvements](#)
-  - [Assemble multiple assets](#)
-  - [Have a modified asset](#)
-
-
-
-
-  - [Two-bis](#Two-Bis)
-  - [Two-bis-bis](#Two-Bis-Bis)
-- [Three](#Three)
+- [Functionalities realized](#Functionalities-realized)
+  - [Mapping the environment](#Mapping-the-environment)
+  - [Displaying an asset in Unity Store](#Displaying-an-asset-in-Unity)
+  - [Unity Store](#Unity-Store)
+  - [Independent movement of objects](#Independent-movement-of-objects])
+  - [Object scaling](#Object-scaling)
+  - [Creating an object from a menu](#Creating-an-object-from-a-menu)
+- [Encountered difficulties](#Encountered-difficulties)
+  - [Room complexity](#Room-complexity)
+  - [New technology](#New-technology)
+- [Limitations of the headset](#Limitations-of-the-headset)
+  - [Assets limits](#Assets-limits)
+  - [Difficulties to display complex assets](#Difficulties-to-display-complex-assets)
+  - [Field of view](#Field-of-view)
+- [Possible improvements](#Possible-improvements)
+  - [Assemble multiple assets](#Assemble-multiple-assets)
+  - [Have a modified asset](#Have-a-modified-asset)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## Introduction
 
-Coding is not only to write code.
 
-## One
-
-
-## Two
+## Functionalities realized
 
 
-### Two Bis
+### Mapping the environment
 
 
-### Two Bis Bis
+### Displaying an asset in Unity Store
 
 
-## Three
+### Unity Store
+
+### Independent movement of objects
+
+
+### Object scaling
+
+
+### Creating an object from a menu
+
+
+## Encountered difficulties
+
+
+### Room complexity
+
+
+### New technology
+
+
+## Limitations of the headset
+
+
+### Assets limits
+
+
+### Difficulties to display complex assets
+
+
+### Field of view
+
+
+## Possible improvements
+
+
+### Assemble multiple assets
+
+
+### Have a modified asset
