@@ -29,10 +29,15 @@ Mixed reality takes place not only in the physical world or the virtual world, b
 
 *- Wikipedia*
 
-Focused on innovation, we contacted several companies to show how mixed reality could benefit workers working on an industrial level. We focused our research on the automobile industry and got a contact: with the Quality Roadmap Team Leader at Renault who was interested in this new technology. We met at the Microsoft Experiences ’17 in Paris and outlined the needs of the company. We came to conclusion that it would greatly benefit Renault to have a way to virtually visit a factory to not only train the workers but also record the environment and be able to share it to other workers in other factories.
-Today companies are faced with a real problem. Assembly lines need to be optimized to guarantee security, and productivity.  That means that our idea could be deployed for other companies in the automobile industry as well as other companies in different domains.
+Focused on innovation, we contacted several companies to show how mixed reality could benefit workers working on an industrial level.
+We focused our research on the automobile industry and got a contact: with the Quality Roadmap Team Leader at Renault who was interested in this new technology.
+We met at the Microsoft Experiences ’17 in Paris and outlined the needs of the company.
+We came to conclusion that it would greatly benefit Renault to have a way to virtually visit a factory to not only train the workers but also record the environment and be able to share it to other workers in other factories.
+Today companies are faced with a real problem. Assembly lines need to be optimized to guarantee security, and productivity.
+That means that our idea could be deployed for other companies in the automobile industry as well as other companies in different domains.
 For safety procedures, it would first greatly reduce the time for safety inspections.
-A proper placement of the machines is essential. To fulfill the demand, we developed an application to enable us to modify in real time, the placement of the machines and visualize them while they are running.
+A proper placement of the machines is essential.
+To fulfill the demand, we developed an application to enable us to modify in real time, the placement of the machines and visualize them while they are running.
 We used and applied our engineering knowledge to build our team and the work around the project. Since this technology is still very new to the scene, a good part of our work  consisted in applying the principles of science and problem solving to move forward.
 Today, after a year of research we are sharing our experience with the community providing a solid base of information to future developers.
 
@@ -69,6 +74,17 @@ Later it will also gives you the possibility to place different elements.
 
 ## Limitations of the headset
 ### Assets limits
+Let's start with a quick rundown of the specs.
+The headset is packing a custom Microsoft Holographic Processing Unit (HPU 1.0) with an Intel 32-bit architecture CPU.
+It is equipped with 2GB of RAM and 64GB of flash storage.
+It has a hard limit of 900MB for memory allocation.
+
+It is very important to keep applications light enough to maintain 60 frames per second and ensure a comfortable experience.
+It is as important to minimize eye-strain and to do that, assets need to be placed in what we call the comfort-zone.
+In fact, Microsoft Windows Mixed Reality Academy recommends to change the value of the Near Clip Plane field from the default 0.3 to 0.85, which equates to 0.85 meters.
+This is to reduce discomfort experienced when having a hologram too close to the user.
+
+![Hologram Placement](img/hololens-hologram-placement.png "Hologram Placement")
 
 
 ### Difficulties to display complex assets
