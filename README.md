@@ -44,6 +44,7 @@ To start, our application need to map the environment around the HoloLens. It's 
 Scan the environment is a normal script, we had to use, called "SpatialMapping". It also allows you to see the mesh draw on the the different elements of the room your in.
 Later it will also gives you the possibility to place different elements.
 
+
 ### Displaying an asset in Unity Store
 
 
