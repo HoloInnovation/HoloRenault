@@ -40,6 +40,9 @@ Today, after a year of research we are sharing our experience with the community
 ## Functionalities
 ### Mapping the environment
 
+To start, our application need to map the environment around the HoloLens. It's an existing functionality that we only have to implement in our application. During the utilization of the normal device's app, the mapping is continuous so we had to do the same in our program.
+Scan the environment is a normal script, we had to use, called "SpatialMapping". It also allows you to see the mesh draw on the the different elements of the room your in.
+Later it will also gives you the possibility to place different elements.
 
 ### Displaying an asset in Unity Store
 
