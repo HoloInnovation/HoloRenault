@@ -27,7 +27,7 @@ As our 4th year engineering project, we decided to take that road to work with A
 *Mixed reality (MR), sometimes referred to as hybrid reality, is the merging of real and virtual worlds to produce new environments and visualizations where physical and digital objects co-exist and interact in real time.
 Mixed reality takes place not only in the physical world or the virtual world, but is a mix of reality and virtual reality, encompassing both augmented reality and augmented virtuality via immersive technology.*
 
-*- Wikipedia*
+*- [Wikipedia](https://en.wikipedia.org/wiki/Mixed_reality)*
 
 Focused on innovation, we contacted several companies to show how mixed reality could benefit workers working on an industrial level.
 We focused our research on the automobile industry and got a contact: with the Quality Roadmap Team Leader at Renault who was interested in this new technology.
@@ -88,7 +88,19 @@ This is to reduce discomfort experienced when having a hologram too close to the
 
 
 ### Difficulties to display complex assets
+During our project we used assets with great complexity with over 8 million polygons.
+These type of assets are too large for the headset to compute.
+Ideally, we found assets need to be 100'000 polygons or lower to properly be handle by the headset.
 
+In tis case,a good software would be Simplygon:
+
+*Simplygon is a 3D computer graphics software for automatic 3D optimization, based on proprietary methods for creating level of detail (LODs) through Polygon mesh reduction and other optimization techniques.*
+
+*- [Wikipedia](https://en.wikipedia.org/wiki/Simplygon)*
+
+However, a simplification from 8M to 100k is a lot to ask, results were not satisfying as polygons were very irregular.
+A better way to do this is to first manually simplify the model by deleting unnecessary details invisible from the exterior.
+This would greatly improve the simplification process by the software.
 
 ### Field of view
 
