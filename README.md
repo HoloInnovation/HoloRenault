@@ -46,7 +46,7 @@ Today, after a year of research we are sharing our experience with the community
 ### Mapping the environment
 
 To start, our application need to map the environment around the HoloLens. It's an existing functionality that we only have to implement in our application. During the utilization of the normal device's app, the mapping is continuous so we had to do the same in our program.
-Scan the environment is a normal script, we had to use, called "SpatialMapping". It also allows you to see the mesh draw on the the different elements of the room your in.
+Scan the environment is a normal script called "SpatialMapping". It also allows you to see the mesh draw on the the different elements of the room your in.
 Later it will also gives you the possibility to place different elements.
 
 
@@ -103,7 +103,11 @@ A better way to do this is to first manually simplify the model by deleting unne
 This would greatly improve the simplification process by the software.
 
 ### Field of view
-
+Microsoft says the headset covers 35% of the field of view of the user wich greatly impacts ease to move around the environment.
+It forces to the user to move their head more often and results to the appearance of neck pain more quickly.
+Placing one hologram usually fills the field of view and limits the capabilities of the application.
+The biggest drawback is when using large assets of 3 or 4 meters wide.
+Already limited by the performance of the headset; the experience is less immersive as the user finds himself inside the asset.
 
 ## Possible improvements
 ### Assemble multiple assets
