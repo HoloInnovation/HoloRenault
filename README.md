@@ -111,6 +111,19 @@ Already limited by the performance of the headset; the experience is less immers
 
 ## Possible improvements
 ### Assemble multiple assets
+Models provided by Renault were too large for a One to One scale.
+Testing in a small room resulted in the user not moving properly around the asset.
+For instance, in a smaller room while the user moves forward in reality, the position in the virtual world did not change and sometimes led to experience a feeling of moving against the direction wanted.
+This is explained by the imposing size of the asset.
+Being larger than 5 meters wide, the headset struggles to relay the feeling of reality to the user.
 
+An easy fix would be to re-dimension the asset to make it around 4 meters wide, but that would compromise the purpose of using mixed reality as it would mess with the true dimensions and ultimately  stripping away the 'reality' variable.
+Another solution would be to cut through the model.
+Now as it may work on some machines, it would denaturalize the model once again impacting the immersive experience.
+
+A better solution that would minimize the impact of the user experience while enhancing the benefits of the technology would be to rebuild the machine with the headset.
+Let's take an employee in the automobile industry.
+By adding parts of the machine to the environment, he would with every addition contribute to the final assembly.
+It is an opportunity to interact individually with each part and learn about the functionalities in the process.
 
 ### Have a modified asset
