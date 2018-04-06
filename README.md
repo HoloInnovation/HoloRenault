@@ -45,9 +45,18 @@ Today, after a year of research we are sharing our experience with the community
 ## Functionalities
 ### Mapping the environment
 
-To start, our application need to map the environment around the HoloLens. It's an existing functionality that we only have to implement in our application. During the utilization of the normal device's app, the mapping is continuous so we had to do the same in our program.
-Scan the environment is a normal script called "SpatialMapping". It also allows you to see the mesh draw on the the different elements of the room your in.
-Later it will also gives you the possibility to place different elements.
+*Spatial mapping provides a detailed representation of real-world surfaces in the environment around the HoloLens, allowing developers to create a convincing mixed reality experience.*
+
+*- [Microsoft](https://docs.microsoft.com/en-us/windows/mixed-reality/spatial-mapping)*
+
+
+Most if not every application developed for Hololens will require ```SpatialMapping```.
+It is an existing functionality that we only need to add to our application.
+When opening the app the headset will make a first mapping of the environment.
+In our application, tapping an asset to move it reveals the drawn mesh showing the user where the asset can be placed.
+
+With the latest versions of the HololToolkit, it is possible to tweak the precision of the mesh by adjusting the numbers of triangles for the spatial mapping ```TrianglesPerCubicMeter```
+As explained in [Hologram 230](https://docs.microsoft.com/en-us/windows/mixed-reality/holograms-230) triangles can be added and removed to the mesh.
 
 
 ### Displaying an asset in Unity Store
