@@ -49,6 +49,7 @@ Today, after a year of research we are sharing our experience with the community
 
 *- [Microsoft](https://docs.microsoft.com/en-us/windows/mixed-reality/spatial-mapping)*
 
+![Spatial Mapping*](img/spatial-mapping.png "Spatial Mapping")
 
 Most if not every application developed for Hololens will require ```SpatialMapping```.
 It is an existing functionality that we only need to add to our application.
@@ -69,14 +70,26 @@ As explained in [Hologram 230](https://docs.microsoft.com/en-us/windows/mixed-re
 
 
 ### Object scaling
+Object scaling is an essential feature.
+When there is no need for simulation, for example during a presentation, it is most useful to have a smaller model to act and present around.
 
+In MS Visual Studio to scale an object you need to create a Vector3 as we are working in 3 dimensions.
+It takes three float arguments.
+To keep accurate information using fractal number, simply add (float) to the variable.
 
 ### Creating an object from a menu
 
 
 ## Encountered difficulties
 ### Room complexity
-
+During the development of our application, we tested the Hololens in different environment, from a small classroom to an open space to, an even bigger, factory.
+Observations show that mapping varies a lot depending on the spacious variable as well as the materials in the surroundings.
+The headset struggles in small room as our options of spatial mapping are limited.
+Having furniture play a role as well.
+Different elevations creates differences in the mapping and the Hololens is not immune to errors.
+Dark objects or walls reflect less light and have a tendency to mess with the spatial mapping as well.
+The results of these errors create discontinuities in the mesh.
+Some holes may appear in the mapping and affect object placement as the environment is not recognized.
 
 ### New technology
 
@@ -112,7 +125,7 @@ A better way to do this is to first manually simplify the model by deleting unne
 This would greatly improve the simplification process by the software.
 
 ### Field of view
-Microsoft says the headset covers 35% of the field of view of the user wich greatly impacts ease to move around the environment.
+Microsoft says the headset covers 35% of the field of view of the user which greatly impacts ease to move around the environment.
 It forces to the user to move their head more often and results to the appearance of neck pain more quickly.
 Placing one hologram usually fills the field of view and limits the capabilities of the application.
 The biggest drawback is when using large assets of 3 or 4 meters wide.
