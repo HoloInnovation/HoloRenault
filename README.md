@@ -60,10 +60,7 @@ With the latest versions of the HololToolkit, it is possible to tweak the precis
 As explained in [Hologram 230](https://docs.microsoft.com/en-us/windows/mixed-reality/holograms-230) triangles can be added and removed to the mesh.
 
 
-### Displaying an asset in Unity Store
-
-
-### Unity Store
+### Displaying an asset from Unity Store
 
 
 ### Independent movement of objects
@@ -92,6 +89,7 @@ The results of these errors create discontinuities in the mesh.
 Some holes may appear in the mapping and affect object placement as the environment is not recognized.
 
 ### New technology
+We encountered different types of problems that we tried to solve together. We couldn't find all the answers on the web as the technology is so recent. So a big part of of work was to understand how the device works and try on our own.
 
 
 ## Limitations of the headset
