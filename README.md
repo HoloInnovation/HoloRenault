@@ -64,7 +64,7 @@ As explained in [Hologram 230](https://docs.microsoft.com/en-us/windows/mixed-re
 
 
 ### Independent movement of objects
-
+As the main goal of the project was the set up of Renault's machines in a factory, one of the key feature of the app was the possibility to select an hologram, and to put it wherever the user wanted. For that, we used scripts given on the "HololToolkit", the script "TapToPlace". In order to use this script, we have to have on the Unity scene a Gaze Manager, a Gesture Manager and a spatial mapping. This script is allowing us to then select an asset or hologram, and to put it wherever the mapping is detecting something.
 
 ### Object scaling
 Object scaling is an essential feature.
@@ -75,6 +75,8 @@ It takes three float arguments.
 To keep accurate information using fractal number, simply add (float) to the variable.
 
 ### Creating an object from a menu
+In order to set up the factory, our application should have the possibility to instanciate new assets on the scene. For that, we added a button "Add Asset" in a menu, which allows the user to create a new hologram in front of him whenever he is air tapping the button. This hologram is defined in the component panel of the button.
+The following video on [Youtube](https://www.youtube.com/watch?v=J7vCS75DC6w) is a demonstration of our app, with simple assets :
 
 
 ## Encountered difficulties
