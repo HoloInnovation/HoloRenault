@@ -3,9 +3,8 @@
 - [Introduction](#introduction)
 - [Functionalities](#functionalities)
   - [Mapping the environment](#mapping-the-environment)
-  - [Displaying an asset in Unity Store](#displaying-an-asset-in-Unity)
-  - [Unity Store](#unity-Store)
-  - [Independent movement of objects](#independent-movement-of-objects])
+  - [Displaying an asset from Unity Store](#displaying-an-asset-from-unity-store)
+  - [Independent movement of objects](#independent-movement-of-objects)
   - [Object scaling](#object-scaling)
   - [Creating an object from a menu](#creating-an-object-from-a-menu)
 - [Encountered difficulties](#encountered-difficulties)
@@ -18,6 +17,7 @@
 - [Possible improvements](#possible-improvements)
   - [Assemble multiple assets](#assemble-multiple-assets)
   - [Have a modified asset](#have-a-modified-asset)
+  - [License](LICENSE.md)
 
 ## Introduction
 
@@ -33,7 +33,8 @@ Focused on innovation, we contacted several companies to show how mixed reality 
 We focused our research on the automobile industry and got a contact: with the Quality Roadmap Team Leader at Renault who was interested in this new technology.
 We met at the Microsoft Experiences ’17 in Paris and outlined the needs of the company.
 We came to conclusion that it would greatly benefit Renault to have a way to virtually visit a factory to not only train the workers but also record the environment and be able to share it to other workers in other factories.
-Today companies are faced with a real problem. Assembly lines need to be optimized to guarantee security, and productivity.
+Today companies are faced with a real problem. 
+Assembly lines need to be optimized to guarantee security, and productivity.
 That means that our idea could be deployed for other companies in the automobile industry as well as other companies in different domains.
 For safety procedures, it would first greatly reduce the time for safety inspections.
 A proper placement of the machines is essential.
@@ -49,14 +50,14 @@ Today, after a year of research we are sharing our experience with the community
 
 *- [Microsoft](https://docs.microsoft.com/en-us/windows/mixed-reality/spatial-mapping)*
 
-![Spatial Mapping*](img/spatial-mapping.png "Spatial Mapping")
+![Spatial Mapping](img/spatial-mapping.png "Spatial Mapping")
 
 Most if not every application developed for Hololens will require ```SpatialMapping```.
 It is an existing functionality that we only need to add to our application.
 When opening the app the headset will make a first mapping of the environment.
 In our application, tapping an asset to move it reveals the drawn mesh showing the user where the asset can be placed.
 
-With the latest versions of the HololToolkit, it is possible to tweak the precision of the mesh by adjusting the numbers of triangles for the spatial mapping ```TrianglesPerCubicMeter```
+With the latest versions of the [HololToolkit](https://github.com/Microsoft/MixedRealityToolkit-Unity), it is possible to tweak the precision of the mesh by adjusting the numbers of triangles for the spatial mapping ```TrianglesPerCubicMeter```
 As explained in [Hologram 230](https://docs.microsoft.com/en-us/windows/mixed-reality/holograms-230) triangles can be added and removed to the mesh.
 
 
@@ -64,18 +65,23 @@ As explained in [Hologram 230](https://docs.microsoft.com/en-us/windows/mixed-re
 
 
 ### Independent movement of objects
-As the main goal of the project was the set up of Renault's machines in a factory, one of the key feature of the app was the possibility to select an hologram, and to put it wherever the user wanted. For that, we used scripts given on the "HololToolkit", the script "TapToPlace". In order to use this script, we have to have on the Unity scene a Gaze Manager, a Gesture Manager and a spatial mapping. This script is allowing us to then select an asset or hologram, and to put it wherever the mapping is detecting something.
+As the main goal of the project was the set up of Renault's machines in a factory, one of the key feature of the app was the possibility to select a hologram, and to put it wherever the user wanted. 
+For that, we used scripts given on the "HololToolkit", the script ``TapToPlace``. 
+In order to use this script, we have to have on the Unity scene a ``Gaze Manager``, a ``Gesture Manager`` and a ``Spatial mapping``.
+This script is allowing us to then select an asset or hologram, and to put it wherever the mapping is detecting something.
 
 ### Object scaling
 Object scaling is an essential feature.
 When there is no need for simulation, for example during a presentation, it is most useful to have a smaller model to act and present around.
 
-In MS Visual Studio to scale an object you need to create a Vector3 as we are working in 3 dimensions.
+In Microsoft Visual Studio to scale an object you need to create a Vector3 as we are working in 3 dimensions.
 It takes three float arguments.
 To keep accurate information using fractal number, simply add (float) to the variable.
 
 ### Creating an object from a menu
-In order to set up the factory, our application should have the possibility to instanciate new assets on the scene. For that, we added a button "Add Asset" in a menu, which allows the user to create a new hologram in front of him whenever he is air tapping the button. This hologram is defined in the component panel of the button.
+In order to set up the factory, our application should have the possibility to instanciate new assets on the scene. 
+For that, we added a button *Add Asset* in a menu, which allows the user to create a new hologram in front of him whenever he is air tapping the button. 
+This hologram is defined in the component panel of the button.
 The following video on [Youtube](https://www.youtube.com/watch?v=J7vCS75DC6w) is a demonstration of our app, with simple assets :
 
 
@@ -91,7 +97,9 @@ The results of these errors create discontinuities in the mesh.
 Some holes may appear in the mapping and affect object placement as the environment is not recognized.
 
 ### New technology
-We encountered different types of problems that we tried to solve together. We couldn't find all the answers on the web as the technology is so recent. So a big part of of work was to understand how the device works and try on our own.
+We encountered different types of problems that we tried to solve together. 
+We couldn't find all the answers on the web as the technology is so recent. 
+So a big part of of work was to understand how the device works and try on our own.
 
 
 ## Limitations of the headset
@@ -139,7 +147,7 @@ For instance, in a smaller room while the user moves forward in reality, the pos
 This is explained by the imposing size of the asset.
 Being larger than 5 meters wide, the headset struggles to relay the feeling of reality to the user.
 
-An easy fix would be to re-dimension the asset to make it around 4 meters wide, but that would compromise the purpose of using mixed reality as it would mess with the true dimensions and ultimately  stripping away the 'reality' variable.
+An easy fix would be to re-dimension the asset to make it around 4 meters wide, but that would compromise the purpose of using mixed reality as it would mess with the true dimensions and ultimately stripping away the 'reality' variable.
 Another solution would be to cut through the model.
 Now as it may work on some machines, it would denaturalize the model once again impacting the immersive experience.
 
@@ -149,3 +157,13 @@ By adding parts of the machine to the environment, he would with every addition 
 It is an opportunity to interact individually with each part and learn about the functionalities in the process.
 
 ### Have a modified asset
+
+## License
+Find attached the [license](LICENSE.md).
+This document is made available to the community for educational purposes.
+This document contains intellectual proprety and is protected.
+The idea and application are protected.
+
+Unauthorized use of intellectual proprety without consent of the creators is punishable.
+
+CC BY-NC-SA 2.0 - Intellectual property protected.
