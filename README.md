@@ -19,14 +19,14 @@
   - [Field of view](#field-of-view)
 - [Possible improvements](#possible-improvements)
   - [Assemble multiple assets](#assemble-multiple-assets)
-- [Spatial Mapping: Optimal conditions](#spatial-mapping:-optimal-conditions)
+- [Optimal conditions](#optimal-conditions)
 - [License](#license)
 
 ## Introduction
 
 The Microsoft Hololens.  
-The new mixed reality headset developed by Microsoft was brought in 2016 to the developers scene to offer a new platform for innovation.
-As our 4th year engineering project, we decided to take that road to work with Actimage, a digital transformation expert group and work on a new technology that marries the virtual to the real world.
+The new mixed reality headset developed by Microsoft was brought to the developer scene in 2016 to offer a new platform for innovation.
+As our 4th year engineering project we decided to work with [Actimage](https://www.actimage.com/fr/), a digital transformation expert group, on a new technology that marries the virtual to the real world.
 
 *Mixed reality (MR), sometimes referred to as hybrid reality, is the merging of real and virtual worlds to produce new environments and visualizations where physical and digital objects co-exist and interact in real time.
 Mixed reality takes place not only in the physical world or the virtual world, but is a mix of reality and virtual reality, encompassing both augmented reality and augmented virtuality via immersive technology.*
@@ -36,11 +36,11 @@ Mixed reality takes place not only in the physical world or the virtual world, b
 Focused on innovation, we contacted several companies to show how mixed reality could benefit workers working on an industrial level.
 We focused our research on the automobile industry and got a contact: with the Quality Roadmap Team Leader at Renault who was interested in this new technology.
 We met at the *Microsoft Experiences ’17* in Paris and outlined the needs of the company.
-We came to conclusion that it would greatly benefit Renault to have a way to virtually visit a factory to not only train the workers but also record the environment and be able to share it to other workers in other factories.
+We came to conclusion that it would greatly benefit Renault to have a way to virtually visit a factory to not only train the workers but also record the environment and be able to share it to other workers in other factories.  
 Today companies are faced with a real problem.  
 Assembly lines need to be optimized to guarantee security, and productivity.
-That means that our idea could be deployed for other companies in the automobile industry as well as other companies in different domains.
-For safety procedures, it would first greatly reduce the time for safety inspections.
+That means that our idea could be deployed to other companies in the automobile industry as well as companies working in different sectors.
+For safety procedures, it would greatly reduce the time of safety inspections.
 A proper placement of the machines is essential.
 To fulfill the demand, we developed an application to enable us to modify in real time, the placement of the machines and visualize them while they are running.  
 We used and applied our engineering knowledge to build our team and the work around the project.
@@ -61,7 +61,7 @@ Today, after a year of research we are sharing our experience with the community
 
 :warning: **Check HoloToolkit on GitHub for Unity version compatibility.**
 
-*You will find a solid base of tutorials at the [Windows Mixed Reality Academy](https://docs.microsoft.com/en-us/windows/mixed-reality/academy) to get you started.*
+*You will find tutorials at the [Windows Mixed Reality Academy](https://docs.microsoft.com/en-us/windows/mixed-reality/academy) to get you started.*
 
 ## Functionalities
 ### Mapping the environment
@@ -77,53 +77,54 @@ It is an existing functionality that we only need to add to our application.
 When opening the app the headset will make a first mapping of the environment.
 In our application, tapping an asset to move it reveals the drawn mesh showing the user where the asset can be placed.
 
-With the latest versions of the [HololToolkit](https://github.com/Microsoft/MixedRealityToolkit-Unity), it is possible to tweak the precision of the mesh by adjusting the numbers of triangles for the spatial mapping ```TrianglesPerCubicMeter```
-As explained in [Hologram 230](https://docs.microsoft.com/en-us/windows/mixed-reality/holograms-230) triangles can be added and removed to the mesh.
+With the latest versions of the [HololToolkit](https://github.com/Microsoft/MixedRealityToolkit-Unity), it is possible to tweak the precision of the mesh by adjusting the numbers of triangles of the spatial mapping: ```TrianglesPerCubicMeter```.
+As explained in [Hologram 230](https://docs.microsoft.com/en-us/windows/mixed-reality/holograms-230) triangles can be added or removed from the mesh.
 
 ### Displaying an asset from Unity Store
 It is possible to import assets from the [Asset Store](https://assetstore.unity.com/) as we did for testings.
-The platform is a hub where you will find creations from Unity Technologies or members of the community, easily accessible with ``Window > Asset Store`` from the main menu.
+The platform is a hub where you will find creations from Unity Technologies or members of the community, easily accessible from ``Window > Asset Store`` in the main menu.
 An import aspect in Unity is Asset Packages.
 Packages are collections of files and data from Unity projects just like .zip files, that you can import into your project or on the other hand export from your project to share.  
 For instance, to import a custom package such as the HoloToolkit to your project, go to ``Assets > Import Package > Custom Package`` and select the package from your Windows explorer.
 
 ### Independent movement of objects
-As the main goal of the project was the set up of Renault's machines in a factory, one of the key feature of the app was the possibility to select a hologram, and to put it wherever the user wanted. 
-For that, we used scripts given on the "HololToolkit", the script ``TapToPlace``. 
-In order to use this script, we have to have on the Unity scene a ``Gaze Manager``, a ``Gesture Manager`` and a ``Spatial mapping``.
-This script is allowing us to then select an asset or hologram, and to put it wherever the mapping is detecting something.
+The main goal of the project was the set up of Renault's machines in a factory.
+One of the key feature of the app was the option to select a hologram and to place it wherever the user desired. 
+To achieve this, we used the script ``TapToPlace`` provided in the HololToolkit. 
+In order to utilize this script, we require in the Unity scene the use of ``Gaze Manager``, ``Gesture Manager`` and ``Spatial mapping``, all provided in the HoloToolKit.
+This script allows us to select an asset or hologram and to palce it where mapping is detected.
 
 ### Object scaling
 Object scaling is an essential feature.
-When there is no need for simulation, for example during a presentation, it is most useful to have a smaller model to act and present around.
+When there is no need of simulation, for example during a presentation, it is most useful to have a smaller model to move around.
 
-In Microsoft Visual Studio to scale an object you need to create a Vector3 as we are working in 3 dimensions.
+In Microsoft Visual Studio to scale an object you need to create a ``Vector3`` as we are working in 3 dimensions.
 It takes three float arguments.
 To keep accurate information using fractal number, simply add (float) to the variable.
 
 ### Creating an object from a menu
 In order to set up the factory, our application should have the possibility to instanciate new assets on the scene. 
-For that, we added a button *Add Asset* in a menu, which allows the user to create a new hologram in front of him whenever he is air tapping the button. 
+We added a button *Add Asset* in a menu which allows the user to create a new hologram in front of him whenever he is air tapping the button. 
 This hologram is defined in the component panel of the button.
-The following video on [Youtube](https://www.youtube.com/watch?v=J7vCS75DC6w) is a demonstration of our app, with simple assets.
+[Here](https://www.youtube.com/watch?v=J7vCS75DC6w) is a demonstration of our app using simple assets.
 
 ## Encountered difficulties
 ### Room complexity
-During the development of our application, we tested the Hololens in different environments, from a small classroom to an open space to, an even bigger, factory.
+During the development of our application, we tested the Hololens in different environments from a small classroom, to an open space, to an even bigger, factory.
 Observations show that mapping varies a lot depending on the spatial variable as well as the materials in the surroundings.
-The headset struggles in small rooms as our options with smaller spatial mapping are limited.
-Having furniture play a role as well.
+The headset struggles in small rooms as our options with a reduced spatial mapping are limited.
+Having furnitures play a role as well.
 Different elevations create differences in the mapping and the Hololens is not immune to errors.
-Dark objects or walls reflect less light and have a tendency to mess with the spatial mapping as well.
+Dark objects or walls reflect less light and therefore have a tendency to mess with the spatial mapping.
 The results of these errors create discontinuities in the mesh.
 Some holes may appear in the mapping and affect object placement as the environment is not recognized.
 
 ### New technology
-We encountered different types of problems that we tried to solve together. 
+We encountered different types of problems that we tried to solve. 
 We couldn't find all the answers on the web as the technology is so recent. 
-So a big part of of work was to understand how the device works and try on our own.
+So a big part of our work was to understand how the device works and try to find the answers on our own.
 
-The community behind the technology is getting bigger. We found some answers to our problems on the [Microsoft Community](https://developer.microsoft.com/en-us/windows/mixed-reality/community) and on [Stack Overflow](https://stackoverflow.com/questions/tagged/hololens).  
+The community behind the technology is getting bigger. We found some answers to our problems on the [Microsoft Community](https://developer.microsoft.com/en-us/windows/mixed-reality/community) and [Stack Overflow](https://stackoverflow.com/questions/tagged/hololens).  
 
 :bulb: **Use the [Unity Forums](https://forum.unity.com/) & try different keywords in your searches**
 
@@ -146,7 +147,7 @@ This is to reduce discomfort experienced when having a hologram too close to the
 ### Difficulties to display complex assets
 During our project we used assets of great complexity with over 8 million polygons.
 These type of assets are too large for the headset to compute.
-Ideally, we found assets need to be 100'000 polygons or lower to properly be handle by the headset.
+Ideally, we found assets need to be 100'000 polygons or lower to be properly handled by the headset.
 
 In this case, a good software for asset simplification would be [Simplygon](https://www.simplygon.com/):
 
@@ -161,7 +162,7 @@ This would greatly improve the simplification process by the software.
 ### Field of view
 Microsoft says the headset covers 35% of the field of view of the user which greatly impacts ease to move around the environment.
 It forces the user to move his head more often and results in the appearance of neck pain more quickly.
-Placing one hologram usually fills the field of view and limits the capabilities of the application.
+Placing one hologram rapidly fills the field of view and limits the capabilities of the application.
 The biggest drawback is when using large assets of 3 or 4 meters wide.
 Already limited by the performance of the headset; the experience is less immersive as the user finds himself inside the asset.
 
@@ -177,19 +178,19 @@ An easy fix would be to re-dimension the asset to make it around 4 meters wide, 
 Another solution would be to cut through the model.
 Now as it may work on some machines, it would denaturalize the model once again impacting the immersive experience.
 
-A better solution that would minimize the impact of the user experience while enhancing the benefits of the technology would be to rebuild the machine with the headset.  
+A better solution to minimize the impact on the user experience while enhancing the benefits of the technology would be to rebuild the machine with the headset.  
 Let's take an employee in the automobile industry.
 By adding parts of the machine to the environment, he would with every addition, contribute to the final assembly.
 It is an opportunity to interact individually with each part and learn about their functionalities in the process.
 
-## Spatial Mapping: Optimal conditions
+## Optimal conditions
 Here is our rundown of ideal conditions for a successful spatial mapping.
 
 **Textures**  
-*We recommend a flat light surface*.  
+*We recommend a flat bright surface*.  
 :heavy_check_mark: Wooden floors  
 :heavy_check_mark: Concrete  
-:x: Carpet, expecially dark toned  
+:x: Carpet, especially dark toned  
 :x: Gravel  
 
 **Spatial variable**  
@@ -198,11 +199,11 @@ Here is our rundown of ideal conditions for a successful spatial mapping.
 :x: Sharp 45° corners  
 
 **Furnitures**  
-:heavy_check_mark: Closed desk instead of  
+:heavy_check_mark: Closed desks  
 :x: Dark metal furnitures  
 
 ## License
-This document is made available to the community for educational purposes.  
+This document is made available to the community for educational purposes only.  
 This document contains intellectual proprety and is protected.  
 The idea and application are protected.
 
