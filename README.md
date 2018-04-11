@@ -36,13 +36,15 @@ Mixed reality takes place not only in the physical world or the virtual world, b
 Focused on innovation, we contacted several companies to show how mixed reality could benefit workers working on an industrial level.
 We focused our research on the automobile industry and got a contact: with the Quality Roadmap Team Leader at Renault who was interested in this new technology.
 We met at the *Microsoft Experiences ’17* in Paris and outlined the needs of the company.
-We came to conclusion that it would greatly benefit Renault to have a way to virtually visit a factory to not only train the workers but also record the environment and be able to share it to other workers in other factories.  
+We came to conclusion that it would greatly benefit Renault to have a way to virtually visit a factory to not only train the workers but also record the environment and be able to share it to other workers in other factories.
+
 Today companies are faced with a real problem.  
 Assembly lines need to be optimized to guarantee security, and productivity.
 That means that our idea could be deployed to other companies in the automobile industry as well as companies working in different sectors.
 For safety procedures, it would greatly reduce the time of safety inspections.
 A proper placement of the machines is essential.
-To fulfill the demand, we developed an application to enable us to modify in real time, the placement of the machines and visualize them while they are running.  
+To fulfill the demand, we developed an application to enable us to modify in real time, the placement of the machines and visualize them while they are running.
+
 We used and applied our engineering knowledge to build our team and the work around the project.
 Since this technology is still very new to the scene, a good part of our work  consisted in applying the principles of science and problem solving to move forward.
 Today, after a year of research we are sharing our experience with the community providing a solid base of information to future developers.
@@ -77,7 +79,8 @@ It is an existing functionality that we only need to add to our application.
 When opening the app the headset will make a first mapping of the environment.
 In our application, tapping an asset to move it reveals the drawn mesh showing the user where the asset can be placed.
 
-With the latest versions of the [HololToolkit](https://github.com/Microsoft/MixedRealityToolkit-Unity), it is possible to tweak the precision of the mesh by adjusting the numbers of triangles of the spatial mapping: ```TrianglesPerCubicMeter```.
+With the latest versions of the [HololToolkit](https://github.com/Microsoft/MixedRealityToolkit-Unity), it is possible to tweak the precision of the mesh by adjusting the numbers of triangles of the spatial mapping: ```TrianglesPerCubicMeter```. By default the number is fixed at 500 triangles but can go up to 1200.
+
 As explained in [Hologram 230](https://docs.microsoft.com/en-us/windows/mixed-reality/holograms-230) triangles can be added or removed from the mesh.
 
 ### Displaying an asset from Unity Store
@@ -164,7 +167,7 @@ Microsoft says the headset covers 35% of the field of view of the user which gre
 It forces the user to move his head more often and results in the appearance of neck pain more quickly.
 Placing one hologram rapidly fills the field of view and limits the capabilities of the application.
 The biggest drawback is when using large assets of 3 or 4 meters wide.
-Already limited by the performance of the headset; the experience is less immersive as the user finds himself inside the asset.
+Already limited by the performance of the headset; the experience is less immersive as the user finds himself inside the asset. (More info under [Assemble multiple assets](#assemble-multiple-assets)).
 
 ## Possible improvements
 ### Assemble multiple assets
@@ -209,4 +212,4 @@ The idea and application are protected.
 
 Unauthorized use of intellectual proprety without consent of the creators is punishable.
 
-License: [CC BY-NC-SA 2.0](LICENSE.md) - Intellectual property protected.
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/2.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.0/">CC BY-NC-SA 2.0 Generic License</a>.
