@@ -1,6 +1,9 @@
 # HoloRenault
 
 - [Introduction](#introduction)
+- [Prérequis](#prérequis)
+  - [Préparer l'ordinateur](#préparer-lordinateur)
+  - [Outils](#outils)
 - [Fonctionalités](#fonctionalités)
   - [Mapping de l'environment](#mapping-de-lenvironment)
   - [Afficher un asset depuis le Unity Store](#afficher-un-asset-depuis-le-unity-store)
@@ -16,13 +19,13 @@
   - [Champs de vision](#champs-de-vision)
 - [Améliorations possibles](#améliorations-possibles)
   - [Assembler plusieurs assets](#assembler-plusieurs-assets)
-  - [Avoir un asset modifié](#avoir-un-asset-modifié)
-  - [License](LICENSE.md)
+- [Conditions Optimales d'utilisation](#conditions-optimales-dutilisation)
+- [License](LICENSE.md)
 
 ## Introduction
 Le Microsoft Hololens.
 Le nouveau casque de réalité mixte developpé par Microsoft a été introduit en 2016 aux communautés de developpeurs offrant alors une nouvelle plateforme propice à l'innovation.
-Dans le cadre de notre projet de 4ème année en école d'ingénieur, nous avons choisi de travailler avec Actimage, une société spécialisée dans la transformation digitale, afin de travailler sur cette nouvelle technologie qui marie le monde virtuel au monde réél.
+Dans le cadre de notre projet de 4ème année en école d'ingénieur, nous avons choisi de travailler avec [Actimage](https://www.actimage.com/fr/), une société spécialisée dans la transformation digitale, afin de travailler sur cette nouvelle technologie qui marie le monde virtuel au monde réél.
 
 *Mixed reality (MR), sometimes referred to as hybrid reality, is the merging of real and virtual worlds to produce new environments and visualizations where physical and digital objects co-exist and interact in real time.
 Mixed reality takes place not only in the physical world or the virtual world, but is a mix of reality and virtual reality, encompassing both augmented reality and augmented virtuality via immersive technology.*
@@ -47,6 +50,22 @@ C'est en applicant notre savoir faire d'ingénieur que nous avons construit notr
 Cette technologie est relativement jeune et les principes de l'ingénieurie sont essentiels pour avancer.
 Aujourd'hui, apès une année de travail, nous partageons notre expérience avec la communauté en fournissant une base d'informations aux futurs developpeurs.
 
+## Prérequis
+### Préparer l'ordinateur
+
+- Windows 10 Pro, Entreprise ou Education est nécessaire pour une compatibilité complète. Plus d'info [ici](https://docs.microsoft.com/fr-fr/windows/mixed-reality/install-the-tools).
+
+### Outils
+
+- [Microsoft Hololens headset](https://www.microsoft.com/fr-fr/hololens)
+- [Unity](https://unity3d.com/fr)
+- [HoloToolkit](https://github.com/Microsoft/MixedRealityToolkit-Unity)
+- [Microsoft Visual Studio Community](https://www.visualstudio.com/fr/downloads/)
+
+:warning: **Verifier la version du HoloToolkit sur GitHub pour la compatibilité avec Unity.**
+
+*Tutoriels disponiblent sur [Windows Mixed Reality Academy](https://docs.microsoft.com/en-us/windows/mixed-reality/academy) pour s'initier*
+
 ## Fonctionalités
 ### Mapping de l'environment
 
@@ -69,17 +88,22 @@ Comme il est bien expliquer dans [Hologram 230](https://docs.microsoft.com/en-us
 
 ### Afficher un asset depuis le Unity Store
 
+Il est possible d'importer des assets depuis l'[Asset Store]() comme nous l'avons fais pour nos pièces de test.
+La plateforme renferme les créations de Unity Technologies mais également ceux réalisés par la communaité, facilement accessible depuis ``Windows > Asset Store`` dans le menu principal.
+Un aspect important avec Unity sont les *Asset Packages*. Les paquets sont des collections de fichiers de données d'un projet Unity et fonctionnent comme un .zip .
+Ils peuvent être importé ou exporté depuis un projet.  
+Par exemple, pour importer un packet comme le HoloToolKit in suffit d'aller dans ``Assets > Import Package > Custom Package`` puis de selectionner le fichier depuis l'explorateur Windows.
 
 ### Déplacement indépendant des objets
 Avec pour objectif principal de notre projet de placer les machines Renault en usine, la caractéristique au coeur de notre application est la possibilité de selectionner un holograme et de le placer dans l'environment.
-Pour cela, nous avons utiliser un script disponible dans le HololToolkit: ``TapToPlace``
-Afin d'utiliser ce script, il est nécessaire d'implementer auparavant dans la scène Unity le ``GazeManager``, le ``GestureManager`` et le ``SpatialMapping``.
+Pour cela, nous avons utiliser un script disponible dans le HololToolkit: ``TapToPlace``.
+Afin d'utiliser ce script, il est nécessaire d'implementer auparavant dans la scène Unity le ``GazeManager``, ``GestureManager`` et le ``SpatialMapping``.
 
 ### Changement d'échelle des assets
 La mise à l'échelle est une foncitonalités importante de l'application.
 Dans le cas ou une simulation à taille réél n'est pas nécessaire, par exemple dans le cas d'une présentation, il s'avère plus pratique de disposer d'une machine à taille réduite pour faciliter le déplacement.
 
-Dans Microsoft Visual Studio, la mise à l'échelle d'un objet se passe par la création d'un Vecteur3 étant donner que nous travaillons dans un espace à 3 dimensions.
+Dans Microsoft Visual Studio, la mise à l'échelle d'un objet se passe par la création d'un ``Vecteur3`` étant donner que nous travaillons dans un espace à 3 dimensions.
 Le vecteur prend 3 paramètres *float* en arguments répresenant les axes X, Y, Z.
 Afin de conserver la précision d'un nombre fractionel, il suffit d'ajouter *(float)* à l'argument.
 
@@ -103,19 +127,26 @@ Les objets plus sombres du fait de l'absorption de la lumière sont parfois à l
 Cela implique que les objets ne peuvent pas être placé n'importe où dans l'environement.
 
 ### Nouvelle technologie
-Nous avons rencontré différent types de problèmes auquels nous avons fais face.
+Nous avons rencontré différents types de problèmes auxquels nous avons fait face.
 Nous n'arrivions pas à trouver facilement les solutions sur le net du fait de la jeune adoption de la technologie.
 Une grande partie de notre travail était donc de comprendre comment est-ce que le casque fonctionne.
 
+La communauté derière la technologie s'agrandit tous les jours. Nous avons trouvé certaines réponses à nos questions sur [Microsoft Community](https://developer.microsoft.com/fr-fr/windows/mixed-reality/community) et [Stack Overflow](https://stackoverflow.com/questions/tagged/hololens).
+
+:bulb: **Utiliser [Unityt Forum](https://forum.unity.com/) & différents mots clés **
+
 ## Limites du casque
 ### Limites des assets
-Le casque est équipé d'un porcesseur graphique appélé *Microsoft Holographic Unit (HPU 1.0)* et un d'un processeur Intel 32-bit.
-Il est équipé de 2GB de RAM et 64GB de mémoire flash.
-Il possède une limite de 900MB d'allocation de mémoire.
+Le casque est équipé:
+
+- Du *Microsoft Holographic Unit (HPU 1.0)*
+- D'un processeur Intel 32-bit
+- 2GB de RAM et 64GB de mémoire flash
+- Une limite de 900MB d'allocation de mémoire
 
 Il est donc très important de garder les applications suffisament légère pour maintenir 60FPS et assurer une utilisation confortable à l'utilisateur.
 Il est également important de minimiser la fatigue oculaire et pour ce faire, les assets doivent être placer dans la zone de confort.
-En effet, *Microsoft Windows Miwed Reality Academy* recommande de changer la valeur du ```Near Clip Plane Field``` de 0.3 à 0.85, équivalent à 0.85 mètre.
+En effet, Microsoft recommande de changer la valeur du ```Near Clip Plane Field``` de 0.3 à 0.85, équivalent à 0.85 mètre.
 Cela permet de reduir de la pénibilité visuel lorsqu'un hologram est trop proche de l'utilisateur.
 
 ![Placement d'un Hologram](/img/hololens-hologram-placement.png "Hologram Placement")
@@ -165,12 +196,31 @@ Prenons l'exemple d'un employé dans l'indutrie automobile.
 En ajoutant les pièces de la machine dans l'environement, l'employé contriburait avec chaque addition de pièce à la machine final.
 C'est une oportunité d'intéragir individuellement avec chaque partie qui compose la machine et d'apprendre par la même ocasion les fonctionalités de chaque assets.
 
-### Avoir un asset modifié
+## Conditions Optimales d'utilisation
+Voici les conditions idéales
+Here is our rundown of ideal conditions for a successful spatial mapping.
+
+**Textures**  
+*We recommend a flat bright surface*.  
+:heavy_check_mark: Wooden floors  
+:heavy_check_mark: Concrete  
+:x: Carpet, especially dark toned  
+:x: Gravel  
+
+**Spatial variable**  
+:heavy_check_mark: Room greater than 10m²  
+:x: Round corners  
+:x: Sharp 45° corners  
+
+**Furnitures**  
+:heavy_check_mark: Closed desks  
+:x: Dark metal furnitures  
 
 ## License
-Ci-joint la [license](LICENSE.md).
-Ce document est mis à disposition de la communauté mais possède des popriétés intellectuelles portégées comme l'idée et l'application.
+Ce document est mis à disposition de la communauté pour des fins pédagogiques.
+Ce document possède des popriétés intellectuelles portégées 
+L'idéé et l'application sont protégés.
 
-L'utilisations sans consentement des créateurs est punis.
+L'utilisations des propriétés intellectuel sans le consentement des créateurs est punis.
 
-CC BY-NC-SA 2.0 - Propritété intellectuelle protégée.
+Licence: [CC BY-NC-SA 2.0](https://creativecommons.org/licenses/by-nc-sa/2.0/deed.fr) - Propritétés intellectuelles protégées.
