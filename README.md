@@ -105,6 +105,10 @@ In Microsoft Visual Studio to scale an object you need to create a ``Vector3`` a
 It takes three float arguments.
 To keep accurate information using fractal number, simply add (float) to the variable.
 
+```sh
+Vector3 scale = new Vector3((float) 1,(float)1,(float)1);
+```
+
 ### Creating an object from a menu
 In order to set up the factory, our application should have the possibility to instanciate new assets on the scene. 
 We added a button *Add Asset* in a menu which allows the user to create a new hologram in front of him whenever he is air tapping the button. 
