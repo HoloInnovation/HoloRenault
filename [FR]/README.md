@@ -20,7 +20,7 @@
 - [Améliorations possibles](#améliorations-possibles)
   - [Assembler plusieurs assets](#assembler-plusieurs-assets)
 - [Conditions Optimales d'utilisation](#conditions-optimales-dutilisation)
-- [License](LICENSE.md)
+- [Licence](#licence)
 
 ## Introduction
 Le Microsoft Hololens.
@@ -107,6 +107,10 @@ Dans Microsoft Visual Studio, la mise à l'échelle d'un objet se passe par la c
 Le vecteur prend 3 paramètres *float* en arguments répresenant les axes X, Y, Z.
 Afin de conserver la précision d'un nombre fractionel, il suffit d'ajouter *(float)* à l'argument.
 
+```sh
+Vector3 scale = new Vector3((float) 1,(float)1,(float)1);
+```
+
 ### Création d'un objet à partir d'un menu
 Pour la mise en place de l'usine, notre application devrait avoir la possibilité d'instancier de nouvelles machines dans la scène.
 Pour cela, nous avons ajouter un bouton *Add asset* au menu.
@@ -133,7 +137,7 @@ Une grande partie de notre travail était donc de comprendre comment est-ce que 
 
 La communauté derière la technologie s'agrandit tous les jours. Nous avons trouvé certaines réponses à nos questions sur [Microsoft Community](https://developer.microsoft.com/fr-fr/windows/mixed-reality/community) et [Stack Overflow](https://stackoverflow.com/questions/tagged/hololens).
 
-:bulb: **Utiliser [Unityt Forum](https://forum.unity.com/) & différents mots clés **
+:bulb: **Utiliser [Unity Forum](https://forum.unity.com/) & différents mots clés**
 
 ## Limites du casque
 ### Limites des assets
@@ -187,7 +191,6 @@ Avec une largeur de plus de 5 mètre, le casque renontre des difficultés à rel
 
 Un solution serait de redimensionner les assets à 4 mètres ou moins.
 Mais cela irait à l'encontre du but de la réalité mixte étant donné que les dimensions ne seraient pas representatif de la réalité.
-
 Une autre solution serait de couper le modèle.
 Encore une fois, même si cela pourrait marcher sur certaines machines, cela irait à l'encontre de l'objectif de la réalité mixte.
 
@@ -197,30 +200,29 @@ En ajoutant les pièces de la machine dans l'environement, l'employé contribura
 C'est une oportunité d'intéragir individuellement avec chaque partie qui compose la machine et d'apprendre par la même ocasion les fonctionalités de chaque assets.
 
 ## Conditions Optimales d'utilisation
-Voici les conditions idéales
-Here is our rundown of ideal conditions for a successful spatial mapping.
+Voici les conditions idéales pour un mapping réussis.
 
 **Textures**  
-*We recommend a flat bright surface*.  
-:heavy_check_mark: Wooden floors  
-:heavy_check_mark: Concrete  
-:x: Carpet, especially dark toned  
-:x: Gravel  
+*Il est préférable d'effectuer le mappign sur une surface plate et éclairée*.  
+:heavy_check_mark: Parquet  
+:heavy_check_mark: Béton  
+:x: Moquette, surtout de teinte foncée  
+:x: Gravier  
 
-**Spatial variable**  
-:heavy_check_mark: Room greater than 10m²  
-:x: Round corners  
-:x: Sharp 45° corners  
+**Environement**  
+:heavy_check_mark: Surface supérieur à 10m²  
+:x: Recoins arrondis  
+:x: Recoins d'angle à 45°  
 
-**Furnitures**  
-:heavy_check_mark: Closed desks  
-:x: Dark metal furnitures  
+**Mobilier**  
+:heavy_check_mark: Table de bureau fermé
+:x: Meubles noir en métal  
 
-## License
-Ce document est mis à disposition de la communauté pour des fins pédagogiques.
-Ce document possède des popriétés intellectuelles portégées 
+## Licence
+Ce document est mis à disposition de la communauté pour des fins pédagogiques.  
+Ce document possède des popriétés intellectuelles portégées.  
 L'idéé et l'application sont protégés.
 
 L'utilisations des propriétés intellectuel sans le consentement des créateurs est punis.
 
-Licence: [CC BY-NC-SA 2.0](https://creativecommons.org/licenses/by-nc-sa/2.0/deed.fr) - Propritétés intellectuelles protégées.
+<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/2.0/deed.fr/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/2.0/88x31.png" /></a><br />Cette propriété est protégée sous <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/2.0/deed.fr">CC BY-NC-SA 2.0 Generic License.</a>.
